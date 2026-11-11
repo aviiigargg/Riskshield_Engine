@@ -1,0 +1,39 @@
+
+
+body {
+  background-color: #0D0D0F;
+  color: #F2F0EC;
+}
+
+.navbar {
+  background-color: #141416;
+}
+
+.card {
+  background-color: #1A1A1D;
+  color: #F2F0EC;
+  border: 1px solid #343438;
+}
+
+.form-label {
+  color: #E5E7EB;
+  font-size:18px;
+  font-weight: 400;
+}
+
+.form-control {
+  background-color: #111113;
+  color: #F2F0EC;
+  border: 1px solid #343438;
+}
+
+.form-control::placeholder {
+  color: #8F8D89;
+}
+
+.form-control:focus {
+  background-color: #111113;
+  color: #F2F0EC;
+  border-color: #A68A64;
+  box-shadow: none;
+}
