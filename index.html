@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+  rel="stylesheet">
+
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">
+                RiskShield Engine
+            </a>
+            <button class="btn btn-outline-light dropdown-toggle">User Page</button>
+            
+            </div>
+        </nav>
+
+    <div class="container mt-3">
+
+        <div class="card bg-dark text-white mt-4 rounded-4">
+            <div class="card-body mb-3">
+
+            <h1 class="text-white text-center mb-2">Loan Application Details</h1>
+            <p class=" form-description text-center mb-4">Provide Your financial Details for Evaluation</p>
+        <form id="loanform">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                
+                    <label for="loanAmount" class="form-label">
+                        Requested Loan Amount
+                    </label>
+                    <input 
+                    type="number" 
+                    id="loanAmount" 
+                    class="form-control" 
+                    placeholder="Enter Loan Amount"
+                    name="RequestedAmount"
+                    required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="loantenure" class="form-label">Loan Tenure</label>
+                    <input class="form-control"
+                    type="number"
+                    required
+                    placeholder="Enter Loan Tenure in Months"
+                    id="loantenure"
+                    name="LoanTenure">
+                </div>
+       
+        
+            
+                <div class="col-md-6 mb-3">
+                    <label for="AnnualIncome" class="form-label">Annual Income</label>
+                    <input type="number"
+                    placeholder="Enter Annual Income"
+                    id="AnnualIncome"
+                    class="form-control"
+                    name="annualIncome"
+                    required>
+                </div>   
+        
+                
+                <div class="col-md-6 mb-3">
+                    <label for="creditscore" class="form-label">Credit Score</label>
+                    <input type="number"
+                    placeholder="Enter Credit Score (350-750)"
+                    min="350"
+                    max="750"
+                    name="Creditscore"
+                    class="form-control"
+                    required
+                    id="creditscore">
+
+                </div>
+
+                 <div class="col-md-6 mb-3">
+                    <label for="credithistory" class="form-label">Credit History</label>
+                    <input type="number" class="form-control"
+                    placeholder="Enter Credit History (Months)"
+                    min="0"
+                    max="12"
+                    name="CreditHistory"
+                    required
+                    id="credithistory">
+                </div>
+                 <div class="col-md-6 mb-3">
+                    <label for="debtpayements" class="form-label">Monthly Debt Payements</label>
+                    <input class="form-control"
+                    type="number"
+                    required
+                    id="debtpayements"
+                    name="DebtPayments"
+                    placeholder="Enter Monthly Debt Payements">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="missedpayements" class="form-label">Missed Payements</label>
+                    <input type="number" class="form-control"
+                    placeholder="Enter Missed Payements"
+                    id="missedpayements"
+                    name="MissedPayements"
+                    required>
+                </div>
+                <div class="col-md-6 mb-3">                    
+                    <label for="monthlyexpenses" class="form-label">Monthly Expenses</label>
+                    <input class="form-control"
+                    type="number"
+                    placeholder="Enter Monthly Expenses"
+                    required
+                    name="MonthlyExpenses"
+                    id="monthlyexpenses">
+                </div>
+            </div>
+                <div class="d-flex gap-3 mt-3">
+                    <button type="reset"  class="btn btn-outline-light w-50">Reset</button>
+                    <button type="submit" class="btn btn-primary w-100">Submit Application</button>
+                </div>
+        </form>
+
+    </div>
+        </div>
+            </div>
+    
+</body>
+</html>
