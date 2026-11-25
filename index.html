@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | RiskShield Engine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="brand-group">
+            <div class="brand-logo">RS</div>
+            <div>
+                <p class="brand-name">RiskShield</p>
+                <p class="brand-subtitle">ENGINE</p>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="login-main">
+        <section class="login-card">
+            <p class="small-heading">Login</p>
+            <h1>Welcome back.</h1>
+            <p class="subtitle">Let's get you back in.</p>
+
+            <form action="user_page.html" method="get" class="login-form">
+                <div class="form-group">
+                    <label for="user-id">User ID</label>
+                    <input type="text" id="user-id"
+                           placeholder="Enter your User ID"
+                           autocomplete="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password"
+                           placeholder="Enter your password"
+                           autocomplete="current-password" required>
+                </div>
+
+                <button type="submit" class="primary-button">
+                    Sign in
+                </button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

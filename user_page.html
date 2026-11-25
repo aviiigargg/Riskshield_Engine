@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Application | RiskShield Engine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="brand-group">
+            <div class="brand-logo">RS</div>
+            <div>
+                <p class="brand-name">RiskShield</p>
+                <p class="brand-subtitle">ENGINE</p>
+            </div>
+        </div>
+
+        <details class="page-menu">
+            <summary>User Page</summary>
+            <nav class="menu-links">
+                <a href="login.html">Login</a>
+                <a href="user_page.html" class="current">User Page</a>
+                <a href="risk_analyst.html">Risk Analyst</a>
+                <a href="loan_officer.html">Loan Officer</a>
+            </nav>
+        </details>
+    </header>
+
+    <main class="page-container user-page">
+        <div class="page-heading">
+            <p class="eyebrow">THE FIRST STEP</p>
+            <h1>Loan application<span>.</span></h1>
+            <p class="subtitle">
+                Your financial details. A clearer path to a decision.
+            </p>
+        </div>
+
+        <form class="card" id="application-form">
+            <div class="card-header">
+                <h2>Application details</h2>
+                <p class="muted">
+                    Complete all fields to prepare your application.
+                </p>
+            </div>
+
+            <div class="card-body">
+                <section class="form-section">
+                    <h3>Loan details</h3>
+                    <p class="section-note">
+                        Tell us about the loan you want to apply for.
+                    </p>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="loan-amount">Loan amount (₹)</label>
+                            <input type="number" id="loan-amount"
+                                   name="loanAmount" placeholder="e.g. 500000"
+                                   min="1" step="1" required>
+                            <p class="hint">Amount you would like to borrow.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="loan-tenure">Loan tenure</label>
+                            <select id="loan-tenure" name="loanTenure" required>
+                                <option value="" disabled selected>
+                                    Select duration
+                                </option>
+                                <option value="6">6 months</option>
+                                <option value="12">12 months</option>
+                                <option value="24">24 months</option>
+                                <option value="36">36 months</option>
+                                <option value="48">48 months</option>
+                                <option value="60">60 months</option>
+                            </select>
+                            <p class="hint">Your preferred repayment period.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h3>Income &amp; employment</h3>
+                    <p class="section-note">
+                        A little context about your financial position.
+                    </p>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="annual-income">Annual income (₹)</label>
+                            <input type="number" id="annual-income"
+                                   name="annualIncome" placeholder="e.g. 1200000"
+                                   min="1" step="1" required>
+                            <p class="hint">
+                                Total yearly income before deductions.
+                            </p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="employment-duration">
+                                Employment duration (months)
+                            </label>
+                            <input type="number" id="employment-duration"
+                                   name="employmentDuration" placeholder="e.g. 24"
+                                   min="0" step="1" required>
+                            <p class="hint">
+                                Time in your current employment.
+                                Enter 0 if not employed.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h3>Credit details</h3>
+                    <p class="section-note">
+                        Your credit record and repayment history.
+                    </p>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="credit-score">Credit score</label>
+                            <input type="number" id="credit-score"
+                                   name="creditScore" placeholder="e.g. 700"
+                                   min="0" step="1" required>
+                            <p class="hint">
+                                Enter the score from your credit report.
+                            </p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="credit-history">
+                                Credit history (months)
+                            </label>
+                            <input type="number" id="credit-history"
+                                   name="creditHistory" placeholder="e.g. 36"
+                                   min="0" step="1" required>
+                            <p class="hint">
+                                Time since your first credit account was opened.
+                            </p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="missed-payments">Missed payments</label>
+                            <input type="number" id="missed-payments"
+                                   name="missedPayments" placeholder="e.g. 0"
+                                   min="0" step="1" required>
+                            <p class="hint">
+                                Number of missed payments in the last 12 months.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h3>Monthly commitments</h3>
+                    <p class="section-note">
+                        Your existing repayments and regular spending.
+                    </p>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="monthly-debt">
+                                Monthly debt payments (₹)
+                            </label>
+                            <input type="number" id="monthly-debt"
+                                   name="monthlyDebt" placeholder="e.g. 15000"
+                                   min="0" step="1" required>
+                            <p class="hint">
+                                Existing loan and credit repayments.
+                                Enter 0 if none.
+                            </p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="monthly-expenses">
+                                Monthly expenses (₹)
+                            </label>
+                            <input type="number" id="monthly-expenses"
+                                   name="monthlyExpenses" placeholder="e.g. 25000"
+                                   min="0" step="1" required>
+                            <p class="hint">
+                                Living expenses, excluding the debt payments
+                                entered above.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="form-actions">
+                    <button type="reset">Reset form</button>
+                    <button type="button" id="submit-application"
+                            class="submit-button">
+                        Submit application
+                    </button>
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
