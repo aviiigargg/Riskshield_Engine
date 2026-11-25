@@ -1,0 +1,556 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0d0f;
+    color: #efeeeb;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color-scheme: dark;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px 28px;
+    background-color: #141416;
+    border-bottom: 1px solid #2c2c30;
+}
+
+.brand-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 44px;
+    border: 1px solid #a68a64;
+    border-radius: 4px;
+    color: #c4aa83;
+    font-family: Georgia, serif;
+    font-size: 20px;
+}
+
+.brand-name {
+    font-family: Georgia, serif;
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+.brand-subtitle {
+    color: #b5a58c;
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-top: 3px;
+}
+
+.page-menu {
+    position: relative;
+}
+
+.page-menu summary {
+    min-width: 160px;
+    padding: 10px 14px;
+    border: 1px solid #77736c;
+    border-radius: 6px;
+    color: #efeeeb;
+    background-color: #111113;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    width: 180px;
+    padding: 6px;
+    background-color: #1a1a1d;
+    border: 1px solid #444449;
+    border-radius: 8px;
+    z-index: 10;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px 12px;
+    color: #efeeeb;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.menu-links a:hover,
+.menu-links .current {
+    background-color: #302d28;
+    color: #c4aa83;
+}
+
+.page-container {
+    max-width: 1120px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+.page-heading {
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    color: #c4aa83;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.eyebrow::before {
+    content: "";
+    width: 24px;
+    height: 1px;
+    background-color: #c4aa83;
+}
+
+h1 {
+    font-size: 38px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin-bottom: 14px;
+}
+
+h1 span,
+.small-heading {
+    color: #c4aa83;
+}
+
+.subtitle {
+    color: #aaa7a2;
+    font-size: 17px;
+}
+
+.card,
+.login-card {
+    background-color: #1a1a1d;
+    border: 1px solid #343438;
+    border-radius: 12px;
+}
+
+.card {
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.card-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid #343438;
+}
+
+.card-body {
+    padding: 24px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 4px;
+}
+
+h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.muted,
+.section-note,
+.hint {
+    color: #aaa7a2;
+    font-size: 13px;
+}
+
+.section-note {
+    margin-bottom: 20px;
+}
+
+.analyst-page .section-note {
+    color: #c4aa83;
+}
+
+.form-section + .form-section {
+    margin-top: 28px;
+    padding-top: 28px;
+    border-top: 1px solid #343438;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.form-group {
+    min-width: 0;
+}
+
+.form-group label,
+.rejection-details label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+input,
+select,
+textarea {
+    padding: 14px;
+    background-color: #111113;
+    color: #efeeeb;
+    border: 1px solid #444449;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 16px;
+    max-width: 100%;
+}
+
+.form-group input,
+.form-group select,
+textarea {
+    width: 100%;
+}
+
+input::placeholder,
+textarea::placeholder,
+select:invalid {
+    color: #95918b;
+}
+
+option {
+    color: #efeeeb;
+}
+
+select {
+    cursor: pointer;
+}
+
+.hint {
+    margin-top: 8px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid #343438;
+}
+
+button {
+    padding: 13px 24px;
+    background-color: transparent;
+    color: #efeeeb;
+    border: 1px solid #77736c;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #302d28;
+}
+
+.primary-button,
+.submit-button,
+.save-button {
+    background-color: #c4aa83;
+    border-color: #c4aa83;
+    color: #171513;
+    font-weight: bold;
+}
+
+.primary-button:hover,
+.submit-button:hover,
+.save-button:hover {
+    background-color: #d3bc9a;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+a:focus-visible {
+    outline: 2px solid #c4aa83;
+    outline-offset: 3px;
+}
+
+.login-main {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+}
+
+.small-heading {
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+.login-card h1 {
+    font-family: Georgia, serif;
+}
+
+.login-form {
+    margin-top: 30px;
+}
+
+.login-form .form-group {
+    margin-bottom: 20px;
+}
+
+.login-form button {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.analyst-page table,
+.application-table {
+    min-width: 760px;
+}
+
+.rules-table {
+    min-width: 620px;
+}
+
+th,
+td {
+    padding: 16px 12px;
+    text-align: left;
+    border-bottom: 1px solid #343438;
+    font-size: 14px;
+}
+
+th {
+    color: #aaa7a2;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+td .muted {
+    margin-top: 5px;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #c4aa83;
+    cursor: pointer;
+}
+
+.limit-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.limit-group label,
+.limit-group span {
+    color: #aaa7a2;
+    font-size: 12px;
+}
+
+.limit-group input {
+    width: 104px;
+    padding: 11px;
+}
+
+.score-section {
+    margin-top: 28px;
+}
+
+.formula {
+    margin-top: 12px;
+    color: #c4aa83;
+    font-size: 14px;
+}
+
+.score-ranges,
+.financial-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin: 18px 0;
+}
+
+.range-card {
+    padding: 16px;
+    border: 1px solid #343438;
+    border-radius: 8px;
+}
+
+.range-card p {
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.approve {
+    background-color: #24332b;
+    color: #a0c9ad;
+}
+
+.review {
+    background-color: #303034;
+    color: #d2d0cd;
+}
+
+.decline {
+    background-color: #382725;
+    color: #e4aaa3;
+}
+
+.officer-page .card-header,
+.filter-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.filter-group {
+    font-size: 13px;
+}
+
+.selected-row {
+    background-color: #23211f;
+}
+
+.selected-row td:first-child {
+    border-left: 3px solid #c4aa83;
+}
+
+.view-button {
+    white-space: nowrap;
+    padding: 10px 14px;
+}
+
+.result-summary {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px 36px;
+    margin-bottom: 22px;
+}
+
+.score {
+    font-size: 32px;
+}
+
+.score span {
+    color: #aaa7a2;
+    font-size: 16px;
+}
+
+.financial-details,
+.rejection-details {
+    margin: 16px 0 24px;
+}
+
+.financial-details summary,
+.rejection-details summary {
+    color: #c4aa83;
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+.pass {
+    color: #a0c9ad;
+}
+
+.fail {
+    color: #e4aaa3;
+}
+
+.decision-form {
+    border-top: 1px solid #343438;
+    margin-top: 24px;
+    padding-top: 24px;
+}
+
+textarea {
+    min-height: 95px;
+    resize: vertical;
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        padding: 16px;
+    }
+
+    .page-container {
+        margin: 28px auto;
+        padding: 0 16px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .card-header,
+    .card-body,
+    .login-card {
+        padding: 20px;
+    }
+
+    .form-grid,
+    .score-ranges,
+    .financial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application review | RiskShield Engine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="brand-group">
+            <div class="brand-logo">RS</div>
+            <div>
+                <p class="brand-name">RiskShield</p>
+                <p class="brand-subtitle">ENGINE</p>
+            </div>
+        </div>
+
+        <details class="page-menu">
+            <summary>Loan Officer</summary>
+            <nav class="menu-links">
+                <a href="login.html">Login</a>
+                <a href="user_page.html">User Page</a>
+                <a href="risk_analyst.html">Risk Analyst</a>
+                <a href="loan_officer.html" class="current">Loan Officer</a>
+            </nav>
+        </details>
+    </header>
+
+    <main class="page-container officer-page">
+        <div class="page-heading">
+            <p class="eyebrow">REVIEW &amp; DECIDE</p>
+            <h1>Application review<span>.</span></h1>
+            <p class="subtitle">
+                Review the risk result and record your decision.
+            </p>
+        </div>
+
+        <section class="card">
+            <div class="card-header">
+                <div>
+                    <h2>Evaluated applications</h2>
+                    <p class="muted">3 applications</p>
+                </div>
+
+                <div class="filter-group">
+                    <label for="outcome-filter">Suggested outcome</label>
+                    <select id="outcome-filter">
+                        <option>All outcomes</option>
+                        <option>Approved</option>
+                        <option>Review</option>
+                        <option>Rejected</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="table-wrap">
+                <table class="application-table">
+                    <thead>
+                        <tr>
+                            <th>Application</th>
+                            <th>Loan amount</th>
+                            <th>Risk score</th>
+                            <th>Suggested</th>
+                            <th>Officer decision</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>APP-001</td>
+                            <td>₹2,00,000</td>
+                            <td>0 / 100</td>
+                            <td>
+                                <span class="badge approve">Approved</span>
+                            </td>
+                            <td class="muted">Not recorded</td>
+                            <td>
+                                <button type="button" class="view-button">
+                                    View details
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr class="selected-row">
+                            <td>APP-002</td>
+                            <td>₹5,00,000</td>
+                            <td>50 / 100</td>
+                            <td>
+                                <span class="badge review">Review</span>
+                            </td>
+                            <td class="muted">Not recorded</td>
+                            <td>
+                                <button type="button" class="view-button">
+                                    Viewing
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>APP-003</td>
+                            <td>₹8,00,000</td>
+                            <td>100 / 100</td>
+                            <td>
+                                <span class="badge decline">Rejected</span>
+                            </td>
+                            <td class="muted">Not recorded</td>
+                            <td>
+                                <button type="button" class="view-button">
+                                    View details
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="card-header">
+                <div>
+                    <h2>Application APP-002</h2>
+                </div>
+                <p class="muted">Officer decision: not recorded</p>
+            </div>
+
+            <div class="card-body">
+                <div class="result-summary">
+                    <div>
+                        <p class="muted">Calculated risk score</p>
+                        <p class="score">50 <span>/ 100</span></p>
+                    </div>
+                    <div>
+                        <p class="muted">Engine suggestion</p>
+                        <span class="badge review">Review</span>
+                    </div>
+                    <div>
+                        <p class="muted">Rule results</p>
+                        <p>2 of 4 enabled checks failed</p>
+                    </div>
+                </div>
+
+                <details class="financial-details">
+                    <summary>Applicant financial details</summary>
+
+                    <div class="financial-grid">
+                        <div>
+                            <p class="muted">Requested loan</p>
+                            <p>₹5,00,000</p>
+                        </div>
+                        <div>
+                            <p class="muted">Loan tenure</p>
+                            <p>24 months</p>
+                        </div>
+                        <div>
+                            <p class="muted">Annual income</p>
+                            <p>₹12,00,000</p>
+                        </div>
+                        <div>
+                            <p class="muted">Employment duration</p>
+                            <p>36 months</p>
+                        </div>
+                        <div>
+                            <p class="muted">Credit score</p>
+                            <p>620</p>
+                        </div>
+                        <div>
+                            <p class="muted">Credit history</p>
+                            <p>24 months</p>
+                        </div>
+                        <div>
+                            <p class="muted">Missed payments</p>
+                            <p>3 in the last 12 months</p>
+                        </div>
+                        <div>
+                            <p class="muted">Monthly debt</p>
+                            <p>₹30,000</p>
+                        </div>
+                        <div>
+                            <p class="muted">Monthly expenses</p>
+                            <p>₹40,000</p>
+                        </div>
+                    </div>
+                </details>
+
+                <h3>Why this result?</h3>
+                <p class="section-note">
+                    Settings used for this evaluation.
+                    Higher scores mean higher risk.
+                    0–34: Approved · 35–64: Review · 65–100: Rejected.
+                </p>
+
+                <div class="table-wrap">
+                    <table class="rules-table">
+                        <thead>
+                            <tr>
+                                <th>Parameter</th>
+                                <th>Applicant value</th>
+                                <th>Analyst limit</th>
+                                <th>Explanation</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Credit score</td>
+                                <td>620</td>
+                                <td>Minimum 650</td>
+                                <td class="fail">Below minimum</td>
+                            </tr>
+                            <tr>
+                                <td>Credit history</td>
+                                <td>24 months</td>
+                                <td>Minimum 12 months</td>
+                                <td class="pass">Meets minimum</td>
+                            </tr>
+                            <tr>
+                                <td>Missed payments</td>
+                                <td>3 in last 12 months</td>
+                                <td>Maximum 2</td>
+                                <td class="fail">Above maximum</td>
+                            </tr>
+                            <tr>
+                                <td>Debt-to-income ratio</td>
+                                <td>30%</td>
+                                <td>Maximum 40%</td>
+                                <td class="pass">Within limit</td>
+                            </tr>
+                            <tr>
+                                <td>Loan-to-income ratio</td>
+                                <td>0.42×</td>
+                                <td class="muted">Not selected</td>
+                                <td class="muted">Not evaluated</td>
+                            </tr>
+                            <tr>
+                                <td>Net disposable income</td>
+                                <td>₹30,000 / month</td>
+                                <td class="muted">Not selected</td>
+                                <td class="muted">Not evaluated</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <form class="decision-form">
+                    <h3>Officer decision</h3>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="officer-decision">Decision</label>
+                            <select id="officer-decision" name="officerDecision">
+                                <option value="" disabled selected>
+                                    Select decision
+                                </option>
+                                <option value="approve">Approved</option>
+                                <option value="review">Keep under review</option>
+                                <option value="decline">Rejected</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="officer-notes">Officer notes</label>
+                            <textarea id="officer-notes" name="officerNotes"
+                                      placeholder="Explain the reason for your decision..."></textarea>
+                        </div>
+                    </div>
+
+                    <details class="rejection-details">
+                        <summary>Rejection reason (if declining)</summary>
+                        <label for="rejection-reason">
+                            Reason to show the applicant
+                        </label>
+                        <textarea id="rejection-reason" name="rejectionReason"
+                                  placeholder="Explain why the application was declined..."></textarea>
+                    </details>
+
+                    <div class="form-actions">
+                        <p class="muted">
+                            The engine suggestion stays unchanged.
+                        </p>
+                        <button type="button" class="save-button">
+                            Save decision
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

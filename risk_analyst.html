@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Analyst | RiskShield Engine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="brand-group">
+            <div class="brand-logo">RS</div>
+            <div>
+                <p class="brand-name">RiskShield</p>
+                <p class="brand-subtitle">ENGINE</p>
+            </div>
+        </div>
+
+        <details class="page-menu">
+            <summary>Risk Analyst</summary>
+            <nav class="menu-links">
+                <a href="login.html">Login</a>
+                <a href="user_page.html">User Page</a>
+                <a href="risk_analyst.html" class="current">Risk Analyst</a>
+                <a href="loan_officer.html">Loan Officer</a>
+            </nav>
+        </details>
+    </header>
+
+    <main class="page-container analyst-page">
+        <div class="page-heading">
+            <p class="eyebrow">SET THE CRITERIA</p>
+            <h1>Risk parameters<span>.</span></h1>
+            <p class="subtitle">
+                Choose the checks and limits for each evaluation.
+            </p>
+        </div>
+
+        <form class="card">
+            <div class="card-header">
+                <h2>Parameter settings</h2>
+                <p class="muted">
+                    Select the parameters to include in the risk score.
+                </p>
+            </div>
+
+            <div class="card-body">
+                
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Use</th>
+                                <th>Parameter</th>
+                                <th>Evaluation limit</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="use-credit"
+                                           name="parameters" value="creditScore"
+                                           checked>
+                                </td>
+                                <td>
+                                    <label for="use-credit">Credit score</label>
+                                    <p class="muted">
+                                        Pass when the score meets or exceeds this minimum.
+                                    </p>
+                                </td>
+                                <td>
+                                    <div class="limit-group">
+                                        <label for="credit-limit">Min.</label>
+                                        <input type="number" id="credit-limit"
+                                               name="creditMinimum"
+                                               min="0" step="1" value="650">
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="use-history"
+                                           name="parameters" value="creditHistory"
+                                           checked>
+                                </td>
+                                <td>
+                                    <label for="use-history">Credit history</label>
+                                    <p class="muted">
+                                        Pass when the history reaches this duration.
+                                    </p>
+                                </td>
+                                <td>
+                                    <div class="limit-group">
+                                        <label for="history-limit">Min.</label>
+                                        <input type="number" id="history-limit"
+                                               name="historyMinimum"
+                                               min="0" step="1" value="12">
+                                        <span>months</span>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="use-missed"
+                                           name="parameters" value="missedPayments"
+                                           checked>
+                                </td>
+                                <td>
+                                    <label for="use-missed">Missed payments</label>
+                                    <p class="muted">
+                                        Pass when missed payments in the last
+                                        12 months stay within this limit.
+                                    </p>
+                                </td>
+                                <td>
+                                    <div class="limit-group">
+                                        <label for="missed-limit">Max.</label>
+                                        <input type="number" id="missed-limit"
+                                               name="missedMaximum"
+                                               min="0" step="1" value="2">
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="use-debt"
+                                           name="parameters" value="debtRatio"
+                                           checked>
+                                </td>
+                                <td>
+                                    <label for="use-debt">
+                                        Debt-to-income ratio
+                                    </label>
+                                    <p class="muted">
+                                        Monthly debt as a percentage of monthly
+                                        income must not exceed this limit.
+                                    </p>
+                                </td>
+                                <td>
+                                    <div class="limit-group">
+                                        <label for="debt-limit">Max.</label>
+                                        <input type="number" id="debt-limit"
+                                               name="debtMaximum"
+                                               min="0" step="0.1" value="40">
+                                        <span>%</span>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="use-loan"
+                                           name="parameters" value="loanRatio">
+                                </td>
+                                <td>
+                                    <label for="use-loan">
+                                        Loan-to-income ratio
+                                    </label>
+                                    <p class="muted">
+                                        The loan must not exceed this multiple
+                                        of annual income.
+                                    </p>
+                                </td>
+                                <td>
+                                    <div class="limit-group">
+                                        <label for="loan-limit">Max.</label>
+                                        <input type="number" id="loan-limit"
+                                               name="loanMaximum"
+                                               min="0" step="0.1" value="0.5">
+                                        <span>×</span>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="use-disposable"
+                                           name="parameters"
+                                           value="disposableIncome">
+                                </td>
+                                <td>
+                                    <label for="use-disposable">
+                                        Net disposable income
+                                    </label>
+                                    <p class="muted">
+                                        Monthly income left after debts and
+                                        expenses must meet this minimum.
+                                    </p>
+                                </td>
+                                <td>
+                                    <div class="limit-group">
+                                        <label for="disposable-limit">Min. ₹</label>
+                                        <input type="number" id="disposable-limit"
+                                               name="disposableMinimum"
+                                               min="0" step="100" value="10000">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="score-section">
+                    <h3>Risk score</h3>
+                    
+                   
+
+                    <div class="score-ranges">
+                        <div class="range-card">
+                            <span class="badge approve">Approved</span>
+                            <p>0–34</p>
+                        </div>
+                        <div class="range-card">
+                            <span class="badge review">Review</span>
+                            <p>35–64</p>
+                        </div>
+                        <div class="range-card">
+                            <span class="badge decline">Rejected</span>
+                            <p>65–100</p>
+                        </div>
+                    </div>
+
+                    <p class="muted">
+                        Use the score rounded to the nearest whole number.
+                        Select at least one check before evaluation.
+                    </p>
+                </div>
+
+                <div class="form-actions">
+                    <button type="reset">Reset to defaults</button>
+                    <button type="button" class="save-button">
+                        Save parameters
+                    </button>
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
